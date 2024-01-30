@@ -1,0 +1,39 @@
+:root{
+    --r: 'Rubik';
+    --main:  #39ff14;
+    --neony: #ffee10;
+    --neonr: 	#FF3131;
+    --bg:  #262626;
+    --shw-color: rgba(116, 238, 21, 0.75);
+    --shw-sizes: 0px 0px 10px 0px;
+    --shw-hov-sizes: 0px 0px 30px 0px;
+    --border-color: rgba(116, 238, 21, 0.76);
+    --w: 15%;
+    --h: 15%;
+    --txt-size: 23px;
+    --txt-hov-size: 27px;
+    --txt-shw-color: black;
+    --txt-shw-size: 0 0 10px;
+  }
+  $r: var(--r);
+  $m1: var(--main);
+  $n1: var(--neony);
+  $n2: var(--neonr);
+  $bg: var(--bg);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: $r;
+    font-weight: 400;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;  
+}
+body{
+    background: $bg;
+    color: #FFFFFF;
+  }

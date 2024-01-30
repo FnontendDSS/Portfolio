@@ -1,0 +1,208 @@
+.navbar{
+    display: flex;
+    gap: 40px;
+    @include media(576){
+
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    &-logo{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-box-shadow: var(--shw-sizes) var(--shw-color);
+        -moz-box-shadow: var(--shw-sizes) var(--shw-color);
+        box-shadow: var(--shw-sizes) var(--shw-color);
+        text-shadow: var(--txt-shw-size) var(--txt-shw-color);
+        width: var(--w);
+        height: var(--h);
+        z-index: 10;
+        @include media(576){
+          width: 20%;
+          height: 20%;
+        }
+        font-size: var(--txt-size);
+        border: 2px solid var(--border-color);
+        border-radius: 50%;
+        transition: all 0.3s;
+        &:hover{
+          cursor: pointer;
+          -webkit-box-shadow: var(--shw-hov-sizes) var(--shw-color);
+          -moz-box-shadow: var(--shw-hov-sizes) var(--shw-color);
+          box-shadow: var(--shw-hov-sizes) var(--shw-color);
+          transform: scale(1.1);
+          font-size: var(--txt-hov-size);
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &-nav{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        &__bar{
+          display: none;
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 15%;
+          padding: 10px;
+          filter: drop-shadow(-2px -2px 2px $m1);
+          img{
+            width: 100%;
+          }
+          @include media (576){
+            display: flex;
+          }
+        }
+        &__list{
+            display: flex;
+            width: 100%;
+            gap: 2%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        &__list2{
+            display: none;
+            @include media(576){
+              display: flex;
+              flex-direction: column;
+              align-items: end;
+              justify-content: start;
+              gap: 10px;
+              position: absolute;
+              width: 100%;
+              height: 100vh;
+              top: 0;
+              padding: 10px 0;
+              right: 0;
+              z-index: 10;
+              backdrop-filter: blur(5px);
+              router-link{
+                z-index: 10;
+              }
+            }
+        }
+        @include media(576){
+          &__list{
+            display: none;
+          }
+        }
+    }
+}
+.container{
+    // border: 1px solid red;
+    @include container();
+}
+button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    color: $m1;
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 600;
+    letter-spacing: 4px;
+    padding: 15px 50px;
+    overflow: hidden;
+    @include media(992){
+      font-size: 18px;
+      letter-spacing: 2px;
+      padding: 10px 30px;
+      @include media(768){
+        font-size: 16pxpx;
+        letter-spacing: 1px;
+        padding: 5px 15px;
+      }
+    }
+  }
+  button span {
+    position: absolute;
+  }
+  button span:nth-child(1) {
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $m1);
+  }
+  button span:nth-child(2) {
+    bottom: -100%;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, $m1);
+  }
+  button span:nth-child(3) {
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(-90deg, transparent, $m1);
+  }
+  button span:nth-child(4) {
+    top: -100%;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, $m1);
+  }
+  button:hover {
+    color: $bg;
+    box-shadow: 0 0 10px $m1,
+                0 0 40px $m1,
+                0 0 80px $m1;
+    background: $m1;
+    border-radius: 10px;
+    transition-delay: 0.5s;
+  }
+  button:hover span:nth-child(1) {
+      animation: leftLine .5s linear 0s;
+  }
+  button:hover span:nth-child(2) {
+      animation: bottomLine .5s linear .25s;
+  }
+  button:hover span:nth-child(3) {
+      animation: rightLine .5s linear 0s;
+  }
+  button:hover span:nth-child(4) {
+      animation: topLine .5s linear .25s;
+  }
+  @keyframes topLine {
+      0% {
+        top: -100%;
+      }
+      100% {
+        top: 100%;
+      }
+  }
+  @keyframes bottomLine {
+      0% {
+        bottom: -100%;
+      }
+      100% {
+        bottom: 100%;
+      }
+  }
+  @keyframes rightLine {
+      0% {
+        right: -100%;
+      }
+      100% {
+        right: 100%;
+      }
+  }
+  @keyframes leftLine {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+  }

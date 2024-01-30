@@ -1,0 +1,258 @@
+.skills{
+    display: flex;
+    flex-direction: column;
+    &-title{
+        height: 170px;
+        padding: 70px;
+        @include media(992){
+          padding: 30px 40px;
+          @include media(576){
+            padding: 20px 30px;
+          }
+        }
+        h1 {
+            color: #fff;
+            font-size: 80px;
+            letter-spacing: 8px;
+            font-weight: 600;
+            margin: 0;
+            line-height: 0;
+            animation: glitch1 2.5s infinite;
+            @include media(992){
+              font-size: 50px;
+              @include media(768){
+                font-size: 35px;
+              }
+            }
+          }
+          
+          h1:nth-child(2) {
+            color: #67f3da;
+            animation: glitch2 2.5s infinite;
+          }
+          
+          h1:nth-child(3) {
+            color: #f16f6f;
+            animation: glitch3 2.5s infinite;
+          }
+    }
+    &-main{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        &__card{
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.01);
+            box-shadow: var(--box-shadow-inset);
+            color: var(--text-color-light);
+            backdrop-filter: var(--filter-blur);
+            padding: 3.5rem 1.5rem 2rem;
+            border-radius: 3rem;
+            --box-shadow-inset: inset 0 22px 56px -36px rgba(255, 255, 255, .5), inset 0 4px 5px -4px rgba(255, 255, 255, 1), inset 0 -31px 34px -32px rgba(96, 68, 144, .3), inset 0 39px 50px -34px rgba(202, 172, 255, .3), inset 0 2px 9px rgba(154, 146, 210, .3), inset 0 1px 10px rgba(227, 222, 255, .2);
+            --drop-shadow: 0 0 8px rgba(161, 165, 247, .8);
+            --filter-blur: blur(100px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            @include media(1200){
+              border-radius: 10px;
+              @include media(576){
+                padding: 10px;
+              }
+            }
+            .shine{
+              width: 1000px;
+              height: 100px;
+              margin-left: -100px;
+              transform: rotate(30deg);
+              background: -webkit-linear-gradient(top, transparent, rgba(200,200,200,0.1),transparent);
+              position: absolute;
+              animation: shine 6s ease-in-out infinite;
+            }
+            &:hover{
+                --box-shadow-inset: inset 0 19px 28px -18px rgba(255, 255, 255, .5), inset 0 4px 6px -3px rgba(255, 255, 255, 1), inset 0 -51px 44px -42px rgba(96, 68, 144, .3), inset 0 59px 60px -32px rgba(202, 172, 255, .3), inset 0 4px 16px rgba(154, 146, 210, .3), inset 0 2px 25px rgba(227, 222, 255, .23);
+            }
+            img{
+                width: 100%;
+                border-radius: 20px;
+                @include media(576){
+                  border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+  @keyframes glitch1 {
+    0% {
+      transform: none;
+      opacity: 1;
+    }
+    7% {
+      transform: skew(-0.5deg, -0.9deg);
+      opacity: 0.75;
+    }
+    10% {
+      transform: none;
+      opacity: 1;
+    }
+    27% {
+      transform: none;
+      opacity: 1;
+    }
+    30% {
+      transform: skew(0.8deg, -0.1deg);
+      opacity: 0.75;
+    }
+    35% {
+      transform: none;
+      opacity: 1;
+    }
+    52% {
+      transform: none;
+      opacity: 1;
+    }
+    55% {
+      transform: skew(-1deg, 0.2deg);
+      opacity: 0.75;
+    }
+    50% {
+      transform: none;
+      opacity: 1;
+    }
+    72% {
+      transform: none;
+      opacity: 1;
+    }
+    75% {
+      transform: skew(0.4deg, 1deg);
+      opacity: 0.75;
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glitch2 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(-2px, -3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(-5px, -2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(-5px, -1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(-2px, -6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+  
+  @keyframes glitch3 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(2px, 3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(5px, 2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(5px, 1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(2px, 6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+  @keyframes shine{
+    0%,100%{
+      margin-top: -100px;
+      
+    }
+    50%{
+      margin-top: 800px;
+    }
+  }

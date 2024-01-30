@@ -1,0 +1,215 @@
+.projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 50px;
+    @include media(992){
+        padding: 30px 40px;
+      }
+    &-main{
+        width: 100%;
+        &__splide{
+            display: flex;
+            width: 100%;
+            height: 60%;
+            &--slide{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+                @include media(992){
+                    grid-gap: 10px;
+                    @include media(576){
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                }
+                img{
+                    width: 100%;
+                    border-radius: 30px;
+                }
+                @include media(768){
+                    img{
+                        height: 100%;
+                        border-radius: 20px;
+                    }
+                img:nth-child(3n){
+                    display: none;
+                }
+                @include media(576){
+                    img:nth-child(2n){
+                        display: none;
+                    }
+                }
+                }
+                &___info{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    gap: 5%;
+                    @include media(992){
+                       gap: 2%;
+                    }
+                    h3{
+                        font-size: 30px;
+                        line-height: 140%;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-size: 18px;
+                        line-height: 140%;
+
+                    }
+                    a{
+                        font-size: 24px;
+                        line-height: 140%;
+                        font-weight: 600;
+                        color: $m1;
+                        &:hover{
+                            color: $bg;
+                            transition-delay: 0.5s;
+                        }
+                    }
+                    @include media(992){
+                        h3{
+                            font-size: 24px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                        a{
+                            font-size: 12px;
+                        }
+                     }
+                    &---btn{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+.splide__arrow{
+    background:rgba(205, 214, 219, 0.3);
+    &:hover{
+        border-radius: 50%;
+    }
+}
+.neon__button a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+.neon__button a:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.neon__button a:nth-child(1){
+    filter: hue-rotate(110deg);
+}
+.neon__button a:nth-child(2){
+    filter: hue-rotate(270deg);
+}
+.neon__button a span{
+    position: absolute;
+    display: block;
+}
+.neon__button a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+#neon2{
+    filter: hue-rotate(180deg);
+}
+#neon3{
+    filter: hue-rotate(270deg);
+}
+#neon4{
+    filter: hue-rotate(240deg);
+}
+#neon5{
+    filter: hue-rotate(30deg);
+}
+#neon6{
+    filter: hue-rotate(320deg);
+}
+#neon7{
+    filter: hue-rotate(340deg);
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.neon__button a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.neon__button a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.neon__button a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
