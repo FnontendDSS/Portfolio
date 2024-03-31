@@ -43,6 +43,14 @@
         <div class="shine"></div>
       </div>
       <div class="skills-main__card">
+        <img src="../assets/images/wordpress.svg" alt="">
+        <div class="shine"></div>
+      </div>
+      <div class="skills-main__card">
+        <img src="../assets/images/tilda.png" alt="">
+        <div class="shine"></div>
+      </div>
+      <div class="skills-main__card">
         <img src="../assets/images/npm.png" alt="">
         <div class="shine"></div>
       </div>
